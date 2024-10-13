@@ -41,9 +41,11 @@ public class AN_Button : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        startYPosition = RampObject.position.y;
-        startQuat = transform.rotation;
-        rampQuat = RampObject.rotation;
+        if (RampObject != null) {
+            startYPosition = RampObject.position.y;
+            startQuat = transform.rotation;
+            rampQuat = RampObject.rotation;
+        }
     }
 
     void Update()
